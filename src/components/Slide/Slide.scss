@@ -1,0 +1,101 @@
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+
+  figure {
+    margin: 0;
+    font-size: 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      transition: right 0.3s ease;
+    }
+
+    figcaption {
+      position: absolute;
+      right: -20%;
+      top: 0;
+      width: 20%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2em;
+      color: #fff;
+      font-size: 1rem;
+      transition: right 0.3s ease;
+
+      a.icon {
+        display: inline-block;
+        padding: 1em;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        left: -30%;
+        top: 1em;
+        font-size: 1.3rem;
+        color: #fff;
+        text-decoration: none;
+        transition: right 0.3s ease;
+
+        i {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  &.open {
+    figcaption {
+      right: 0;
+    }
+
+    img {
+      right: 20%;
+    }
+  }
+}
+	.slider-menu {
+		position: absolute;
+		top: 0;
+		left: -15%;
+		width: 20%;
+		background: #000;
+		transition: all 300ms ease;
+
+		&:hover {
+			left: 0%;
+		}
+
+		h1 {
+			position: absolute;
+			left: 120%;
+		}
+
+		ul.slides {
+			border-right: #fff 3px solid;
+			list-style: none;
+
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			font-size: 0;
+			flex-direction: column;
+			overflow: auto;
+
+			img {
+				width: 100%;
+				filter: brightness(0.3);
+			}
+
+			a.active img,
+			a:hover img {
+				filter: brightness(1);
+			}
+		}
+	}
